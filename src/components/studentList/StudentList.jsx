@@ -4,8 +4,8 @@ import axios from "axios";
 const StudentList = () => {
   const [studentArray, setStudentArray] = useState([]);
 
-  useEffect(() => {
-    axios
+  useEffect( () => {
+     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         setStudentArray(res.data);
