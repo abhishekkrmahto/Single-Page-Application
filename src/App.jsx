@@ -5,19 +5,21 @@ import { Routes, Route, Link } from "react-router-dom";
 import Mobiles from "./components/mobiles/Mobiles";
 import StudentList from "./components/studentList/StudentList";
 import StoreApp from "./components/StoreProject/StoreApp";
+import ControlledUI from "./components/ControlledUI/ControlledUI";
 
 const App = () => {
   return (
     <div className="bg-zinc-800 w-screen min-h-screen">
 
 
-      <nav className="flex justify-center gap-10">
+      <nav className="flex justify-center gap-10 ">
         <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/home">Home</Link>
         <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/about">About</Link>
         <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/contact">Contact</Link>
         <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/studentList">StudentList</Link>
         <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/mobiles">Mobiles</Link>
         <a className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" href="/storeProject">Store</a>
+        <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/controlledProject">Controlled UI</Link>
       </nav>
 
         <Routes>
@@ -27,6 +29,7 @@ const App = () => {
           <Route path="/mobiles" element={<Mobiles></Mobiles>}></Route>
           <Route path="/studentList" element={<StudentList></StudentList>}></Route>
           <Route path="/storeProject" element={<StoreApp></StoreApp>}></Route>
+          <Route path="/controlledProject" element={<ControlledUI></ControlledUI>}></Route>
         </Routes>
 
     </div>
