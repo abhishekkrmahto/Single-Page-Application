@@ -6,6 +6,8 @@ import Mobiles from "./components/mobiles/Mobiles";
 import StudentList from "./components/studentList/StudentList";
 import StoreApp from "./components/StoreProject/StoreApp";
 import ControlledUI from "./components/ControlledUI/ControlledUI";
+import SignUp from "./components/SignUpAndLocalStorage/SignUp";
+import SignIn from "./components/SignUpAndLocalStorage/SignIn";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/mobiles">Mobiles</Link>
         <a className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" href="/storeProject">Store</a>
         <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/controlledProject">Controlled UI</Link>
+        <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/signUp">Sing-Up UI</Link>
+        <Link className="p-4 bg-teal-700 rounded-2xl mt-4 cursor-pointer font-bold" to="/signIn">Sing-in UI</Link>
       </nav>
 
         <Routes>
@@ -30,6 +34,8 @@ const App = () => {
           <Route path="/studentList" element={<StudentList></StudentList>}></Route>
           <Route path="/storeProject" element={<StoreApp></StoreApp>}></Route>
           <Route path="/controlledProject" element={<ControlledUI></ControlledUI>}></Route>
+          <Route path="/signUp" element={<SignUp/>}></Route>
+          <Route path="/signIn" element={<SignIn/>}></Route>
         </Routes>
 
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 
 const ControlledUI = () => {
     const [name, setName] = useState(null);
@@ -20,9 +20,9 @@ const ControlledUI = () => {
             <input value={name} onChange={(e=>{setName(e.target.value)})} className='border-2 outline-0 p-2 ml-2 rounded-2xl font-black text-center' type="text" placeholder='Enter Name' />
             <input value={id} onChange={(e)=>{setId(e.target.value)}} className='border-2 outline-0 p-2 ml-2 rounded-2xl font-black text-center' type="text" placeholder='Enter Id' />
         </div>
-        <biv className="btn mt-7">
-            <button onClick={(e)=>{showData(e)}} className='p-3 rounded-2xl bg-teal-800'>Click</button>
-        </biv>
+        <div className="btn mt-7">
+            <button onClick={(e)=>{showData(e)}} className='p-3 rounded-2xl bg-teal-800'>{showAndHide ==="none"?"hide":"show"}</button>
+        </div>
       </form>
       <div className={showAndHide}>
         <div className="flex justify-self-center mt-10 rounded-2xl border p-10 w-[500px] flex-col ">
